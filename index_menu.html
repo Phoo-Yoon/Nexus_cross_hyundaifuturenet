@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bhc_menu</title>
+
+    <style>
+        *{
+            margin : 0;
+            padding : 0;
+        }
+        ul,li{
+            list-style: none;
+        }
+        #menu_wrap{
+            margin : 30px auto;
+            width : 1400px;
+            height: 100px;
+            background-color: lightcoral;
+            position : relative;
+        }
+        .main_menu{
+            width : 200px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size : 20px;
+            font-weight: 600;
+            float : left;
+        }
+        .sub_menu{
+            width : 200px;
+            height: 0px;
+            overflow: hidden;
+            position : relative;
+            z-index: 9;
+            transition-duration: 1s;
+        }
+        .sub_menu li{
+            width : 200px;
+            height: 50px;
+            line-height: 50px;
+            background-color: lightsalmon;
+        }
+        #menu_wrap::after{
+            width : 100%;
+            height: 0px;
+            background-color: lightsalmon;
+            content : "";
+            position : absolute;
+            top : 100px;
+            left : 0;
+            transition-duration: 1s;
+        }
+
+        #menu_wrap:hover .sub_menu{
+            height: 350px;
+        }
+        #menu_wrap:hover::after{
+            height: 350px;
+        }
+        .main_menu:hover{
+            background-color: lightpink;
+        }
+        .sub_menu li:hover{
+            background-color: lightcoral;
+        }
+    </style>
+
+</head>
+<body>
+    <ul id = "menu_wrap">
+        <li class = "main_menu">메뉴소개
+            <ul class = "sub_menu">
+                <li>New &amp; Best</li>
+                <li>치킨 메뉴</li>
+                <li>사이드 메뉴</li>
+                <li>비어존 메뉴</li>
+                <li>치킨 맛의 비밀</li>
+                <li>알레르기 정보</li>
+            </ul>
+        </li>
+
+        <li class = "main_menu">매장소개
+            <ul class = "sub_menu">
+                <li>매장검색</li>
+                <li>지도검색</li>
+            </ul>
+        </li>
+
+        <li class = "main_menu">창업정보
+            <ul class = "sub_menu">
+                <li>BHC 경쟁력</li>
+                <li>가맹점 개설 비용 및 절차</li>
+                <li>창업 FAQ</li>
+            </ul>
+        </li>
+
+        <li class = "main_menu">BHC 소식
+            <ul class = "sub_menu">
+                <li>이벤트</li>
+                <li>공지사항</li>
+                <li>보도자료</li>
+                <li>CF/동영상</li>
+                <li>소셜BHC</li>
+            </ul>
+        </li>
+
+        <li class = "main_menu">BHC 소개
+            <ul class = "sub_menu">
+                <li>CEO 인사말</li>
+                <li>브랜드 스토리</li>
+                <li>BHC 연혁</li>
+                <li>BHC만의 경쟁력</li>
+                <li>BHC 푸드생산공장</li>
+                <li>채용정보</li>
+                <li>오시는 길</li>
+            </ul>
+        </li>
+
+        <li class = "main_menu">고객센터
+            <ul class = "sub_menu">
+                <li>FAQ</li>
+                <li>고객의 소리</li>
+            </ul>
+        </li>
+
+        <li class = "main_menu">E쿠폰안내
+            <ul class = "sub_menu">
+                <li>E쿠폰</li>
+                <li>E쿠폰 문의</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
